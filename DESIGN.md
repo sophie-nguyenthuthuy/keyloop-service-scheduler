@@ -46,6 +46,7 @@ These exclusions are made visible rather than filled with invented requirements.
 8. Availability is advisory. Appointment creation is authoritative and rechecks all references, eligibility, and overlap conditions atomically.
 9. When several allocations are valid, resources are selected in stable identifier order. This makes behavior deterministic; workload balancing is future policy.
 10. Seed data is assessment/demo data, not an administration model.
+11. The MVP validates and normalizes timestamps but does not impose a future-only or dealership-hours policy. Those rules require product agreement and are listed as future decisions.
 
 ## 4. Architecture
 

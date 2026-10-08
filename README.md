@@ -226,6 +226,7 @@ Clients should branch on `status` and `code`, not on the human-readable `detail`
 - Availability is a read-only hint. Booking atomically repeats validation and allocation.
 - Candidate resources are ordered by ID, making allocation and tests deterministic.
 - An `Idempotency-Key` replay with the same request returns the original appointment; it does not consume capacity twice.
+- A syntactically valid offset-aware timestamp is accepted even when it is in the past; future-only and dealership-hours enforcement are explicit product decisions outside this MVP.
 
 ## Project structure
 
@@ -299,4 +300,4 @@ AI accelerated implementation, but it did not own the acceptance criteria or mak
 
 ## Scope boundaries
 
-The MVP intentionally excludes authentication, authorization, dealership working hours, technician leave, bay capabilities beyond active/inactive state, notifications, payments, cancellations, rescheduling, and alternative-slot recommendations. Those are product decisions and future workflows, not silent assumptions hidden in the code.
+The MVP intentionally excludes authentication, authorization, future-only scheduling, dealership working hours, technician leave, bay capabilities beyond active/inactive state, notifications, payments, cancellations, rescheduling, and alternative-slot recommendations. Those are product decisions and future workflows, not silent assumptions hidden in the code.
